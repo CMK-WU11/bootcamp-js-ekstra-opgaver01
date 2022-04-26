@@ -57,7 +57,18 @@
             <li><strong>Bemærk:</strong> Funktionen skal både virke med stort <code>B</code> og lille <code>b</code>.</li>
         </ul>
 
-        <button onclick="validate('e')">Test Opgave D</button>
+        <button onclick="validate('e')">Test Opgave E</button>
+    </fieldset>
+
+    <fieldset class="assignmentF">
+        <legend>Opgave F:</legend>
+        <ul>
+            <li>Lav en funktion <code>assignmentF()</code> der modtager et <code>number</code> <em>eller</em> et <code>array</code> som eneste parameter.</li>
+            <li>Hvis funktionen modtager et <code>number</code>, skal den returnere kvadratroden af tallet.
+            <li>Hvis funktionen modtager et <code>array</code>, skal den returnere kvadratroden af summen af alle tal i array'et (alle værdier som ikke er tal, skal ignoreres).</li>
+        </ul>
+
+        <button onclick="validate('f')">Test Opgave F</button>
     </fieldset>
 
 
@@ -71,7 +82,8 @@
                 assignmentB:[ ['Henrik', 'rik'], ['Batman', 'man'], ['Skole', 'ole'], ['Fridag', 'dag'] ],
                 assignmentC:[ [42, true], [69, false], [420, true], [1337, false] ],
                 assignmentD:[ [[8, 2, 88, -111, 0], 2], [[45, -23, 1, 23, 0.5], 0.5], [[343, -32, 88, -111, 635], 88], [[7, 3, 23, -4, 73], 3] ],
-                assignmentE:[ [['Brian', 'Henrik', 'batman', 42], ['batman', 'Brian']], [['Carsten', 'Troels', 'Henrik', 999], false], [['Bonk!', 'Boom!', 'Bam!', 'Beep!'], ['Bam!', 'Beep!', 'Bonk!','Boom!']] ]
+                assignmentE:[ [['Brian', 'Henrik', 'batman', 42], ['batman', 'Brian']], [['Carsten', 'Troels', 'Henrik', 999], false], [['Bonk!', 'Boom!', 'Bam!', 'Beep!'], ['Bam!', 'Beep!', 'Bonk!','Boom!']] ],
+                assignmentF:[ [25, 5], [81, 9], [[4, 4, 4, 4], 4], [['HTML', 'CSS', 100, 'JS', 'PHP'], 10] ]
             }
 
             let errors = {};
@@ -107,6 +119,13 @@
 
                     document.querySelector('.assignmentE').style.backgroundColor = errors.assignmentE ? color.invalid : color.valid;
                 break;
+
+                case 'f': 
+                    cases.assignmentF.forEach(check => { if (typeof assignmentF === 'undefined' || assignmentF(check[0]) !== check[1]) errors.assignmentF = true});
+                    document.querySelector('.assignmentF').style.backgroundColor = errors.assignmentF ? color.invalid : color.valid;
+                
+                break;
+
             }
         }
 
