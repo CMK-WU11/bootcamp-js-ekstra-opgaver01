@@ -80,7 +80,7 @@
 
             switch(assignment) {
                 case 'a':
-                    cases.assignmentA.forEach(check => { errors.assignmentA = typeof assignmentA === 'undefined' || assignmentA( check[0], check[1]) !== check[2] });
+                    cases.assignmentA.forEach(check => { if (typeof assignmentA === 'undefined' || assignmentA( check[0], check[1]) !== check[2]) errors.assignmentA = true});
                     document.querySelector('.assignmentA').style.backgroundColor = errors.assignmentA ? color.invalid : color.valid;
                 break;
                 case 'b':
