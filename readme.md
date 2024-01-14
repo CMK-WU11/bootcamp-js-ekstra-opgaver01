@@ -10,6 +10,8 @@ Du finder beskrivelsen af hver funktion i index.html.
 - Du kan teste dine funktioner ved at åbne index.html i browseren
 - Hvis boksen bliver grøn, når du tester, er opgaven løst korrekt
 
-## Aflevering
+**Aflevering**
 
-Aflevering foregår på GitHub. Push ofte og lav en pull-request, når du er klar til at aflevere.
+Din aflevering foregår på GitHub, så dit sidste commit/push er din aflevering.
+
+Du skal aflevere i classroom-repositoriet.
