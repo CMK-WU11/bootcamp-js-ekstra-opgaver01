@@ -1,4 +1,4 @@
-# Bootcamp JS Ekstra Opgaver
+# Bootcamp JS Opgave
 
 I denne opgave skal du kode en række funktioner. 
 
